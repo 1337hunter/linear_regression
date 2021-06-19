@@ -9,6 +9,9 @@ class   LinearRegression:
         self.weights = []
         self.train_dataset = []
 
+    def h(self, x):
+        return self.weights[0] + self.weights[1] * x
+
     def write_weights(self):
         try:
             with open(self.weights_path, 'w+') as file:
